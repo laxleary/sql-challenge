@@ -36,10 +36,9 @@ CREATE TABLE dept_emp(
 );
 
 CREATE TABLE salaries(
-    emp_no integer NOT NULL, 
+    emp_no integer PRIMARY KEY, 
     FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
     salary integer NOT NULL,
-    CONSTRAINT salary_id PRIMARY KEY (emp_no, salary)
 );
 
 CREATE TABLE dept_manager(
